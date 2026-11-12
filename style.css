@@ -1,0 +1,134 @@
+/* HUNTS web pages – the app's palette: black, one red, white and grey. */
+:root {
+  --canvas: #080808;
+  --surface: #151515;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #ffffff;
+  --text2: #999999;
+  --accent: #e50914;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+header.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+header.brand img {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+}
+
+header.brand a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin: 40px 0 12px;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 17px;
+  margin: 24px 0 6px;
+}
+
+p, li { color: #d6d6d6; }
+
+ul { padding-left: 20px; }
+
+li { margin: 6px 0; }
+
+a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+.lead {
+  font-size: 19px;
+  color: var(--text2);
+  margin: 0 0 28px;
+}
+
+.updated {
+  font-size: 13px;
+  color: var(--text2);
+  margin: 0 0 28px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--text2);
+}
+
+footer a { color: var(--text2); }
