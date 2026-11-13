@@ -5,5 +5,7 @@ The web pages for HUNTS, the real-life hide-and-seek game for iPhone. GitHub Pag
 - https://miraccozcan.github.io/hunts/ – about the game
 - https://miraccozcan.github.io/hunts/privacy/ – privacy policy
 - https://miraccozcan.github.io/hunts/support/ – help and support
+- https://miraccozcan.github.io/hunts/terms/ – Terms of Use
+- https://miraccozcan.github.io/hunts/community/ – Community Guidelines
 
 The source lives in the app's repository (`AppStore/site`); this repo only publishes it.

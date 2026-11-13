@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HUNTS – Privacy policy</title>
-  <meta name="description" content="What HUNTS does with your location and other data, and how to delete it.">
+  <meta name="description" content="What HUNTS does with your location and other data, how it's protected, and how to delete it.">
   <link rel="icon" href="../favicon.png">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../style.css">
@@ -17,13 +17,13 @@
     </header>
 
     <h1>Privacy policy</h1>
-    <p class="updated">Effective 12 November 2026</p>
+    <p class="updated">Effective 13 November 2026</p>
 
     <div class="card">
-      <p><strong>In short:</strong> HUNTS uses your location only while you play a match, so the game can run. There are no ads and no tracking, and we don't sell your data. Your settings, stats and saved maps stay on your phone. If you make a HUNTS ID, you can delete it and everything the game server keeps for it from the app at any time.</p>
+      <p><strong>In short:</strong> HUNTS uses your location only while you play a match, so the game can run. There are no ads and no tracking, and we don't sell your data. You can play as a guest without an account. Your settings, stats and saved maps stay on your phone. If you make a HUNTS ID, your password is stored only as a one-way hash, and you can delete your HUNTS ID and everything the game server keeps for it from the app at any time.</p>
     </div>
 
-    <p>This policy covers the HUNTS app for iPhone and its game server. “We” means the developer of HUNTS. Questions? Write to <a href="mailto:macmini@chefceber.com">macmini@chefceber.com</a>.</p>
+    <p>This policy covers the HUNTS app for iPhone, its game server and its web pages. “We” means the developer of HUNTS, who is responsible for your data. Questions? Write to <a href="mailto:macmini@chefceber.com">macmini@chefceber.com</a>.</p>
 
     <h2>What HUNTS uses, and why</h2>
 
@@ -33,7 +33,7 @@
     <p>When a match ends, its replay (everyone's paths) is sent to the players' phones and kept there. The game server doesn't store positions after the match.</p>
 
     <h3>Your player name, colour and photo</h3>
-    <p>The name and colour you choose are shown to the other players in your lobby and match. If you add a profile photo, it's shared with the players in your online lobbies, and you can remove it at any time.</p>
+    <p>The name and colour you choose are shown to the other players in your lobby and match, and – if you have a HUNTS ID – on leaderboards and in friend lists. If you add a profile photo, it's shared with the players in your online lobbies, and you can remove it at any time. Offensive names are filtered automatically.</p>
 
     <h3>Team radio</h3>
     <p>When you hold the radio button, your microphone sound goes through the game server to your teammates in that match, as it happens. It isn't recorded or stored. HUNTS only uses the microphone while you hold the button.</p>
@@ -45,44 +45,67 @@
     <p>When you tap Download on a replay, HUNTS saves the replay video to your photo library. It asks only for permission to add photos and never reads your library.</p>
 
     <h3>Your HUNTS ID (optional)</h3>
-    <p>Where the game server offers accounts, you can make a HUNTS ID with a @username. The game server then keeps:</p>
+    <p>You don't need an account to play. If you make a HUNTS ID, the game server keeps:</p>
     <ul>
       <li>your @username, player name and colour;</li>
-      <li>a sign-in key for your phone (stored as a one-way hash);</li>
+      <li>your password – only as a salted, one-way bcrypt hash. Nobody, including us, can read your password from it;</li>
+      <li>which version of the Terms of Use you agreed to, and when;</li>
+      <li>a sign-in key for each phone you sign in on (stored only as a one-way hash);</li>
       <li>results of your online matches: side, win, catches, distance, top speed, time survived, number of players, points, and the city and country of the play area (for city and country leaderboards);</li>
       <li>your friends and friend requests;</li>
+      <li>the players you block, and reports you make or that are made about you (who, which reason, and when);</li>
       <li>maps you back up or share. A shared map can be seen by your friends or by anyone with its share code.</li>
     </ul>
-    <p>Your @username, level and points can appear on leaderboards and in friend search.</p>
+    <p>Your @username, player name, level and points can appear on leaderboards and in friend search – but not to players you've blocked or who blocked you. We don't collect your email address, phone number or real name.</p>
+
+    <h3>Reports and moderation</h3>
+    <p>When a player is reported, we look at the report, the reported player's names and the reason so we can enforce the <a href="../community/">Community Guidelines</a>. The reported player isn't told who reported them.</p>
+
+    <h3>Technical information</h3>
+    <p>Like any internet service, the game server and its hosting providers see your device's IP address when you connect. We use it only to deliver the game and to limit abuse, such as repeated wrong passwords. Server logs record events (for example “a wrong password”), never passwords or sign-in keys, and are kept only briefly by our host.</p>
 
     <h3>On your phone only</h3>
-    <p>Your settings, career stats, match history, replays and saved maps are kept on your phone. They're deleted when you delete the app.</p>
+    <p>Your settings, career stats, match history, replays and saved maps are kept on your phone. They're deleted when you delete the app. Your sign-in key is kept in the phone's keychain and never leaves the device except to sign you in.</p>
 
     <h2>What we don't do</h2>
     <ul>
       <li>No advertising and no ad networks.</li>
       <li>No tracking across other apps or websites, and no analytics SDKs.</li>
-      <li>We don't sell or rent your data, or use it for anything except running the game.</li>
+      <li>We don't sell or rent your data, or use it for anything except running and protecting the game.</li>
     </ul>
 
-    <h2>Where it's stored</h2>
-    <p>The game server runs on Render and HUNTS ID data is stored in a Neon Postgres database, both in the United States. They process data for us only to run the service. Connections between the app and the server are encrypted.</p>
+    <h2>Why we use it</h2>
+    <p>We use your data to provide the game you asked for (running matches, your HUNTS ID, friends and leaderboards); for our legitimate interest in keeping HUNTS safe, fair and secure (moderation, limiting abuse); and, for location, camera, microphone and photos, with the permission you give in iPhone Settings, which you can take back at any time.</p>
+
+    <h2>How it's protected</h2>
+    <ul>
+      <li>All connections between the app and the game server are encrypted (HTTPS and secure WebSockets).</li>
+      <li>Passwords and sign-in keys are stored only as one-way hashes. Changing your password signs out every other phone.</li>
+      <li>Sign-in attempts are limited: repeated wrong passwords lock a username's password sign-in for 15 minutes.</li>
+      <li>Only the developer can access the database, for running and moderating HUNTS.</li>
+    </ul>
+    <p>No system is perfectly secure. If we learn of a breach that affects your data, we'll tell affected players and the authorities as the law requires.</p>
+
+    <h2>Who else handles it</h2>
+    <p>The game server runs on Render, which uses Cloudflare to protect its network, and HUNTS ID data is stored in a Neon Postgres database. These providers process data for us only to run the service, and are based in the United States, where your data is stored. We share data with others only if the law requires it, or to protect someone's safety.</p>
 
     <h2>How long we keep it</h2>
     <ul>
       <li>Match data on the game server: only while the match and its lobby are open.</li>
       <li>HUNTS ID data: until you delete your HUNTS ID. Sign-in keys expire after one year.</li>
+      <li>Blocks and reports: until either player's HUNTS ID is deleted. We delete reports we've dealt with once they're no longer needed.</li>
     </ul>
 
-    <h2>Your choices</h2>
+    <h2>Your choices and rights</h2>
     <ul>
+      <li><strong>Play as a guest:</strong> a HUNTS ID is optional.</li>
       <li><strong>Location, camera, microphone, photos:</strong> change them any time in iPhone Settings › HUNTS.</li>
-      <li><strong>Delete your HUNTS ID:</strong> in the app, go to Profile › Delete account. This deletes your account, results, friends and maps from the game server straight away.</li>
-      <li><strong>Questions or requests:</strong> email us and we'll reply. You can ask for a copy of your data or for it to be corrected or deleted.</li>
+      <li><strong>Delete your HUNTS ID:</strong> in the app, go to Profile › Delete account. This deletes your account, password hash, results, friends, blocks, reports and maps from the game server straight away.</li>
+      <li><strong>Access, correct, export or object:</strong> email us and we'll reply within 30 days. You can ask for a copy of your data, or for it to be corrected or deleted. Depending on where you live, you may also have the right to complain to your data protection authority.</li>
     </ul>
 
     <h2>Children</h2>
-    <p>HUNTS isn't made for children under 13, and we don't knowingly collect data from them. If you think a child has made a HUNTS ID, email us and we'll delete it.</p>
+    <p>HUNTS isn't made for children under 13, and we don't knowingly collect data from them. If you think a child under 13 has made a HUNTS ID, email us and we'll delete it.</p>
 
     <h2>Changes</h2>
     <p>If this policy changes, we'll update this page and the date at the top. Important changes will also be shown in the app.</p>
@@ -91,7 +114,7 @@
     <p><a href="mailto:macmini@chefceber.com">macmini@chefceber.com</a></p>
 
     <footer>
-      <a href="../">HUNTS</a> · <a href="../support/">Support</a>
+      <a href="../">HUNTS</a> · <a href="../terms/">Terms of Use</a> · <a href="../community/">Community Guidelines</a> · <a href="../support/">Support</a>
     </footer>
   </main>
 </body>
